@@ -100,11 +100,3 @@ This project is licensed under the MIT License — see the [LICENSE](LICENSE) fi
 Maintainer: Lucky Joshi (via GitHub: https://github.com/lucky-joshi)
 
 ---
-
-If you'd like, I can also:
-
-- Add a `LICENSE` file (MIT) and update this README accordingly.
-- Convert the app into a small build setup (Vite) for production bundling.
-- Improve accessibility and add tests.
-
-Tell me which of the optional items you'd like next.
