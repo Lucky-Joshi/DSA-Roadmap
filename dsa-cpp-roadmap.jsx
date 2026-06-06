@@ -1,4 +1,5 @@
 const { useState, useEffect, useCallback } = React;
+const STORAGE_KEY = "dsa-cpp-v3";
 
 const CURRICULUM = [
   {
@@ -140,17 +141,17 @@ function DSAChecklist() {
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
-    (async () => {
-      try {
-        const r = await window.storage.get("dsa-cpp-v3");
-        if (r?.value) setChecked(new Set(JSON.parse(r.value)));
-      } catch {}
-      setLoaded(true);
-    })();
+    try {
+      const saved = window.localStorage.getItem(STORAGE_KEY);
+      if (saved) setChecked(new Set(JSON.parse(saved)));
+    } catch {}
+    setLoaded(true);
   }, []);
 
   const save = useCallback(async (s) => {
-    try { await window.storage.set("dsa-cpp-v3", JSON.stringify([...s])); } catch {}
+    try {
+      window.localStorage.setItem(STORAGE_KEY, JSON.stringify([...s]));
+    } catch {}
   }, []);
 
   const toggleSub = useCallback((pId, tId, i) => {
