@@ -93,7 +93,7 @@ Please prefer small, focused PRs (data updates, UI fixes, accessibility improvem
 
 ## License
 
-This project does not currently include a license file. If you want to apply a license, the MIT License is a common choice for small projects. Add a `LICENSE` file to the repo to make the license explicit.
+This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
 
 ## Contact
 
